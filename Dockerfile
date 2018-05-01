@@ -10,7 +10,7 @@ RUN apt-get update \
  && apt-get install -y freecad-daily \
  \
  && apt-get clean
-
+EXPOSE 3000
 RUN adduser --disabled-password --quiet --gecos '' freecad
 RUN usermod -aG video freecad
 USER freecad
